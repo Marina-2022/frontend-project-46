@@ -10,8 +10,9 @@ const getAbsolutePath = (file) => {
 const getExtName = (file) => path.extname(file);
 
 const readData = (file) => fs.readFileSync(file, 'utf-8');
+
 const parse = (file, ext) => {
-    if (ext === 'json') {
+    if (ext === '.json') {
         return JSON.parse(file);
     }
 };
