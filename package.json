@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "bin": { 
+  "bin": {
     "gendiff": "bin/gendiff.js"
   },
   "description": "[![Actions Status](https://github.com/Marina-2022/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Marina-2022/frontend-project-46/actions)",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Marina-2022/frontend-project-46#readme",
   "dependencies": {
-    "commander": "^11.0.0"
+    "commander": "^11.0.0",
+    "lodash": "^4.17.21"
   }
 }
