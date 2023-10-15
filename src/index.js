@@ -17,14 +17,15 @@ const getDiffren = (data1, data2) => {
     const keys = unionKeys.map((key) => {
         if (!_.has(data1, key)) {
             return `  + ${key}: ${data2[key]}\n`;
-        } if (!_.has(data2, key)) {
+        } 
+        if (!_.has(data2, key)) {
             return `  - ${key}: ${data1[key]}\n`;
         }
-          if (_.has(data1, key) && _.has(data2, key) && data1[key] === data2[key]) {
+        if (_.has(data1, key) && _.has(data2, key) && data1[key] === data2[key]) {
             return `    ${key}: ${data1[key]}\n`;
-      }
-      if (_.has(data1, key) && _.has(data2, key) && data1[key] !== data2[key]) {
-        return `  - ${key}: ${data1[key]}\n  + ${key}: ${data2[key]}\n`;
+        }
+        if (_.has(data1, key) && _.has(data2, key) && data1[key] !== data2[key]) {
+            return `  - ${key}: ${data1[key]}\n  + ${key}: ${data2[key]}\n`;
         }
     });
     return `{\n${keys.join('')}}`;
