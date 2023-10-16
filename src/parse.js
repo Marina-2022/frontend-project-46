@@ -1,8 +1,7 @@
-
 const parse = (file, ext) => {
-    if (ext === '.json') {
-        return JSON.parse(file);
-    }
+  if (ext === '.json') {
+    return JSON.parse(file);
+  }
 };
 
-export { parse };
+export default parse;
