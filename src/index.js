@@ -26,6 +26,11 @@ const getDiffren = (data1, data2) => {
         name: key, value1: data1[key], value2: data2[key], type: 'changed',
       };
     }
+    if (_.isPlainObject(data1[key]) && _.isPlainObject(data2[key])) {
+      return {
+        name: key, value: getDiffren(data1[key], data2[key]), type: 'nested',
+      };
+    }
     return { name: key, value: data1[key], type: 'unchanged' };
   });
   return differenceTree;
@@ -63,12 +68,16 @@ const genDiff = (file1, file2) => {
 
   const data1Parse = parse(data1, extname1);
   const data2Parse = parse(data2, extname2);
+                                                    // console.log(data1Parse);
+                                                    // console.log(data2Parse);
 
   const diffrens = getDiffren(data1Parse, data2Parse);
-
+                                                    console.log(diffrens);
   const result = formatting(diffrens);
 
   return result;
 };
+genDiff('file1.json', 'file2.json');
+// console.log(genDiff('file1.json', 'file2.json'));
 
 export default genDiff;
