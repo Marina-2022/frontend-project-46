@@ -16,3 +16,7 @@
 **gendiff for nested files JSON:**
 
 [![asciicast](https://asciinema.org/a/bUScX6qgiC9pSOO08yUNZhuh1.svg)](https://asciinema.org/a/bUScX6qgiC9pSOO08yUNZhuh1)
+
+**gendiff for nested files. Format Plain:**
+
+[![asciicast](https://asciinema.org/a/T2ntpVRsDYbDWxVn3DXcSABlI.svg)](https://asciinema.org/a/T2ntpVRsDYbDWxVn3DXcSABlI)
