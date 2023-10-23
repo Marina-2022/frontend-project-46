@@ -12,3 +12,7 @@
 **gendiff for flat yaml files:**
 
 [![asciicast](https://asciinema.org/a/O44oHVpTLi41npbPutbuwSKYD.svg)](https://asciinema.org/a/O44oHVpTLi41npbPutbuwSKYD)
+
+**gendiff for nested files JSON:**
+
+[![asciicast](https://asciinema.org/a/bUScX6qgiC9pSOO08yUNZhuh1.svg)](https://asciinema.org/a/bUScX6qgiC9pSOO08yUNZhuh1)
