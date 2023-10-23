@@ -50,10 +50,4 @@ const stylish = (differenceTree) => {
   return `${iter(differenceTree, 1)}\n}`;
 };
 
-const formating = (differenceTree, format) => {
-  if (format === 'stylish') {
-    return stylish(differenceTree);
-  }
-  return `Unknown format type - ${format}`;
-};
-export default formating;
+export default stylish;
