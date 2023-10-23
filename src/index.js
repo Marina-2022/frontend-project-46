@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import process from 'process';
 import parse from './parse.js';
-import stylish from './stylish.js';
+import formating from './stylish.js';
 
 const getAbsolutePath = (file) => path.resolve(process.cwd(), file);
 
@@ -57,7 +57,7 @@ const getDiffren = (data1, data2) => {
 //   return `{\n${buildString.join('\n')}\n}`;
 // };
 
-const genDiff = (file1, file2) => {
+const genDiff = (file1, file2, format = 'stylish') => {
   const absolutePath1 = getAbsolutePath(file1);
   const absolutePath2 = getAbsolutePath(file2);
 
@@ -72,7 +72,7 @@ const genDiff = (file1, file2) => {
 
   const diffrens = getDiffren(data1Parse, data2Parse);
   // console.log(diffrens);
-  const result = stylish(diffrens);
+  const result = formating(diffrens, format);
   // console.log(result);
 
   return result;
