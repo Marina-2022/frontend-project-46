@@ -37,26 +37,6 @@ const getDiffren = (data1, data2) => {
   return differenceTree;
 };
 
-// const split = '  ';
-
-// const formatting = (differenceTree) => {
-//   const buildString = differenceTree.map((diff) => {
-//     switch (diff.type) {
-//       case 'deleted':
-//         return `${split}- ${diff.name}: ${diff.value}`;
-//       case 'unchanged':
-//         return `${split}  ${diff.name}: ${diff.value}`;
-//       case 'changed':
-//         return `${split}- ${diff.name}: ${diff.value1}\n${split}+ ${diff.name}: ${diff.value2}`;
-//       case 'added':
-//         return `${split}+ ${diff.name}: ${diff.value}`;
-//       default:
-//         return `Unknown type: ${diff.type}`;
-//     }
-//   });
-//   return `{\n${buildString.join('\n')}\n}`;
-// };
-
 const genDiff = (file1, file2, formatName = 'stylish') => {
   const absolutePath1 = getAbsolutePath(file1);
   const absolutePath2 = getAbsolutePath(file2);
@@ -71,13 +51,10 @@ const genDiff = (file1, file2, formatName = 'stylish') => {
   const data2Parse = parse(data2, extname2);
 
   const diffrens = getDiffren(data1Parse, data2Parse);
-  // console.log(diffrens);
+
   const result = formating(diffrens, formatName);
-  // console.log(result);
 
   return result;
 };
-// genDiff('file1.json', 'file2.json');
-// console.log(genDiff('file1.json', 'file2.json'));
 
 export default genDiff;

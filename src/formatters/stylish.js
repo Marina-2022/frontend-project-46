@@ -12,24 +12,17 @@ const processingData = (value, depth) => {
   const keys = Object.keys(value);
   const result = keys.map((key) => {
     const newKeys = value[key];
-    // console.log(key);
     return `${getSplitDepth(depth + 1)}  ${key}: ${processingData(newKeys, depth + 1)}`;
   });
-    // console.log(`${result}`);
   return `{\n${result.join('\n')}\n ${getSplitDepth(depth)} }`;
 };
-  // console.log(processingData(hhh, 1));
 
 const stylish = (differenceTree) => {
   const iter = (node, depth) => {
-    // console.log(node);
     const buildString = node.map((diff) => {
-      // console.log(diff.type);
-      // console.log(diff);
       switch (diff.type) {
         case 'nested': {
           const getChildren = iter(diff.children, depth + 1);
-          // console.log(getChildren);
           return `${getSplitDepth(depth)}  ${diff.name}: ${getChildren}\n ${getSplitDepth(depth)} }`;
         }
         case 'added':
@@ -44,7 +37,6 @@ const stylish = (differenceTree) => {
           return `Unknown type: ${diff.type}`;
       }
     });
-    // const gg = `{\n${buildString.join('\n')}`;
     return `{\n${buildString.join('\n')}`;
   };
   return `${iter(differenceTree, 1)}\n}`;
