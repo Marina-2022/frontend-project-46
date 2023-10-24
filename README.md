@@ -4,6 +4,30 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/17faa9963e574882d692/test_coverage)](https://codeclimate.com/github/Marina-2022/frontend-project-46/test_coverage)
 [![Github Actions](https://github.com/Marina-2022/frontend-project-46/actions/workflows/main.yml/badge.svg)](https://github.com/Marina-2022/frontend-project-46/actions/workflows/main.yml)
 
+---
+# Difference Calculator
+
+### Description
+
+**The difference calculator is a program that determines the difference between two data structures.**
+
+Features:
+* Support for different input formats: yaml, json
+* Report generation as plain text, stylish and json
+
+### Requirements
+
+* node.js
+
+### Installation:
+
+Clone the repository: ```git clone git@github.com:Marina-2022/frontend-project-46.git```
+```
+make install
+npm link
+```
+
+### Examples:
 
 **gendiff for flat json files:**
 
