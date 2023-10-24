@@ -13,10 +13,14 @@
 
 [![asciicast](https://asciinema.org/a/O44oHVpTLi41npbPutbuwSKYD.svg)](https://asciinema.org/a/O44oHVpTLi41npbPutbuwSKYD)
 
-**gendiff for nested files JSON:**
+**gendiff for nested files. Format stylish:**
 
 [![asciicast](https://asciinema.org/a/bUScX6qgiC9pSOO08yUNZhuh1.svg)](https://asciinema.org/a/bUScX6qgiC9pSOO08yUNZhuh1)
 
 **gendiff for nested files. Format Plain:**
 
 [![asciicast](https://asciinema.org/a/T2ntpVRsDYbDWxVn3DXcSABlI.svg)](https://asciinema.org/a/T2ntpVRsDYbDWxVn3DXcSABlI)
+
+**gendiff for nested files. Format JSON:**
+
+[![asciicast](https://asciinema.org/a/mpVRcWHTJTYokgrDufZrgdRRP.svg)](https://asciinema.org/a/mpVRcWHTJTYokgrDufZrgdRRP)
