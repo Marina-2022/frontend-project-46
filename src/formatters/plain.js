@@ -1,5 +1,3 @@
-// import _ from 'lodash';
-
 const processingData = (value) => {
   if (typeof value === 'object') {
     return !value ? 'null' : '[complex value]';
