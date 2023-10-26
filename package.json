@@ -6,7 +6,7 @@
     "gendiff": "bin/gendiff.js"
   },
   "description": "The difference calculator is a program that determines the difference between two data structures.",
-  "main": "./src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "npx jest"
   },
