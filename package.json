@@ -5,7 +5,7 @@
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
-  "description": "[![Actions Status](https://github.com/Marina-2022/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Marina-2022/frontend-project-46/actions)",
+  "description": "The difference calculator is a program that determines the difference between two data structures.",
   "main": "src/index.js",
   "scripts": {
     "test": "npx jest"
