@@ -1,8 +1,8 @@
 import _ from 'lodash';
 
-const getSplitDepth = (depth) => {
+const getSplitDepth = (depth, splitSize = 4) => {
   const split = ' ';
-  return split.repeat(depth * 4 - 2);
+  return split.repeat(depth * splitSize - 2);
 };
 
 const processingData = (value, depth) => {
@@ -17,7 +17,7 @@ const processingData = (value, depth) => {
   return `{\n${result.join('\n')}\n ${getSplitDepth(depth)} }`;
 };
 
-const stylish = (differenceTree) => {
+const getStylish = (differenceTree) => {
   const iter = (node, depth) => {
     const buildString = node.map((diff) => {
       switch (diff.type) {
@@ -34,7 +34,7 @@ const stylish = (differenceTree) => {
         case 'unchanged':
           return `${getSplitDepth(depth)}  ${diff.name}: ${processingData(diff.value, depth)}`;
         default:
-          return `Unknown type: ${diff.type}`;
+          throw new Error(`Unknown type: ${diff.type}`);
       }
     });
     return `{\n${buildString.join('\n')}`;
@@ -42,4 +42,4 @@ const stylish = (differenceTree) => {
   return `${iter(differenceTree, 1)}\n}`;
 };
 
-export default stylish;
+export default getStylish;
