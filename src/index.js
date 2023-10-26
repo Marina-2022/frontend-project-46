@@ -7,7 +7,7 @@ import formating from './formatters/index.js';
 
 const getAbsolutePath = (file) => path.resolve(process.cwd(), file);
 
-const getExtName = (file) => path.extname(file);
+const getExtName = (file) => path.extname(file).slice(1);
 
 const readData = (file) => fs.readFileSync(file, 'utf-8');
 
