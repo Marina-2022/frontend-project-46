@@ -1,8 +1,8 @@
-import _ from 'lodash';
+// import _ from 'lodash';
 
 const processingData = (value) => {
-  if (_.isObject(value)) {
-    return '[complex value]';
+  if (typeof value === 'object') {
+    return !value ? 'null' : '[complex value]';
   }
   if (typeof value === 'string') {
     return `'${value}'`;
@@ -17,18 +17,20 @@ const getPlain = (differenceTree) => {
         case 'nested':
           return iter(diff.children, `${depth}${diff.name}.`);
         case 'added':
-          return `Property '${depth + diff.name}' was added with value: ${processingData(diff.value)}`;
+          return `Property '${depth + diff.name}' was added with value: ${processingData(diff.value)}\n`;
         case 'deleted':
-          return `Property '${depth + diff.name}' was removed`;
+          return `Property '${depth + diff.name}' was removed\n`;
         case 'changed':
-          return `Property '${depth + diff.name}' was updated. From ${processingData(diff.value1)} to ${processingData(diff.value2)}`;
-        default:
+          return `Property '${depth + diff.name}' was updated. From ${processingData(diff.value1)} to ${processingData(diff.value2)}\n`;
+        case 'unchanged':
           return null;
+        default:
+          throw new Error(`Unknown type: ${diff.type}`);
       }
     });
-    return `${buildString.filter((str) => str !== null).join('\n')}`;
+    return `${buildString.join('')}`;
   };
-  return iter(differenceTree, '');
+  return iter(differenceTree, '').trim();
 };
 
 export default getPlain;
