@@ -1,3 +1,3 @@
-const getJson = (differenceTree) => JSON.stringify(differenceTree);
+// const getJson = (differenceTree) => JSON.stringify(differenceTree);
 
-export default getJson;
+// export default getJson;
