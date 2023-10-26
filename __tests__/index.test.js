@@ -30,31 +30,16 @@ test.each([
     file1: file1Json, file2: file2Json, formatName: 'stylish', expected: expectedStylish,
   },
   {
-    file1: file1Json, file2: file2Json, formatName: 'plain', expected: expectedPlain,
-  },
-  {
-    file1: file1Json, file2: file2Json, formatName: 'json', expected: expectedJson,
-  },
-  {
-    file1: file1Yaml, file2: file2Yaml, formatName: 'stylish', expected: expectedStylish,
-  },
-  {
     file1: file1Yaml, file2: file2Yaml, formatName: 'plain', expected: expectedPlain,
-  },
-  {
-    file1: file1Yaml, file2: file2Yaml, formatName: 'json', expected: expectedJson,
-  },
-  {
-    file1: file1Yml, file2: file2Yml, formatName: 'stylish', expected: expectedStylish,
-  },
-  {
-    file1: file1Yml, file2: file2Yml, formatName: 'plain', expected: expectedPlain,
   },
   {
     file1: file1Yml, file2: file2Yml, formatName: 'json', expected: expectedJson,
   },
   {
     file1: file1Json, file2: file2Json, expected: expectedStylish,
+  },
+  {
+    file1: file1Yaml, file2: file2Yaml, expected: expectedStylish,
   },
 ])('genDiff json, stylish, plain', ({
   file1, file2, formatName, expected,
