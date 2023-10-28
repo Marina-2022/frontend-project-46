@@ -44,11 +44,11 @@ const genDiff = (file1, file2, formatName = 'stylish') => {
   const data1 = readData(absolutePath1, 'utf-8');
   const data2 = readData(absolutePath2, 'utf-8');
 
-  const extname1 = getExtName(file1);
-  const extname2 = getExtName(file2);
+  const typeName1 = getExtName(file1);
+  const typeName2 = getExtName(file2);
 
-  const data1Parse = parse(data1, extname1);
-  const data2Parse = parse(data2, extname2);
+  const data1Parse = parse(data1, typeName1);
+  const data2Parse = parse(data2, typeName2);
 
   const diffrens = getDiffren(data1Parse, data2Parse);
 
